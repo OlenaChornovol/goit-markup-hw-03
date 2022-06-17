@@ -12,6 +12,20 @@ body {
   font-size: 14px;
   letter-spacing: 0.03em;
 }
+/*ховаємо непотрібні елементи*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+} /*сховали*/
+
 .container {
   display: flex;
   width: 1200px;
@@ -125,6 +139,8 @@ header {
   text-align: center;
   color: var(--accent-white-color);
   background-color: #2f303a;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero h1 {
   margin-top: 0;
@@ -134,7 +150,6 @@ header {
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  padding-top: 200px;
 }
 .hero .button {
   background-color: var(--accent-color);
@@ -146,7 +161,6 @@ header {
   line-height: 1.87;
   letter-spacing: 0.06em;
   padding: 10px 32px;
-  margin-bottom: 200px;
 }
 .hero .button:hover, /*є тінь під кнопкою*/
 .hero .button:focus {
@@ -155,13 +169,6 @@ header {
 }
 /*main*/
 
-.features {
-  flex-wrap: wrap;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -207,6 +214,9 @@ header {
 }
 
 /*we-do*/
+.we-do.section {
+  padding-top: 0;
+}
 .we-do-item {
   width: 370px;
   margin-right: 30px;
@@ -226,6 +236,7 @@ header {
   background-color: #f5f4fa;
 }
 .team-item {
+  background-color: var(--accent-white-color);
   width: calc((100% - 90px) / 4);
   margin-right: 30px;
 }
@@ -240,13 +251,14 @@ header {
   width: 270px;
 }
 .team-title {
-  /*падінги не працюють*/
-  padding: 30px auto;
+  padding: 30px 0;
+  text-align: center;
 }
 .team h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -255,6 +267,8 @@ header {
   font-size: 16px;
   line-height: 1.19;
   color: var(--title-text-color);
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* for second page*/
@@ -276,6 +290,9 @@ header {
   padding: 0;
 }
 
+.portfolio-button .list:not(:last-child) {
+  margin-right: 8px;
+}
 .project button {
   font-family: inherit;
   font-weight: 500;
@@ -289,7 +306,7 @@ header {
   text-decoration: none;
   border-radius: 4px;
   border: none;
-  margin-right: 8px;
+
   padding: 6px 22px;
 }
 .project button:hover,
@@ -298,7 +315,7 @@ header {
   color: var(--accent-white-color);
   /*text-shadow: ;*/
 }
-
+/*приклади робіт*/
 .portfolio.list {
   display: flex;
   flex-wrap: wrap;
@@ -350,11 +367,12 @@ header {
 }
 .footer .container .list {
   display: block;
-  padding-top: 20px;
 }
 .footer .logo {
+  display: inline-block;
   color: var(--accent-white-color);
   text-decoration: none;
+  margin-bottom: 27px;
 }
 .address {
   font-style: normal;
@@ -363,6 +381,7 @@ header {
 }
 .list a {
   text-decoration: none;
+
   color: rgba(255, 255, 255, 0.6);
 }
 .footer a:hover,
@@ -370,8 +389,9 @@ header {
   color: var(--accent-color);
 }
 .footer .container .list li {
-  padding-bottom: 9px;
+  margin-bottom: 9px;
+  line-height: 24px;
 }
 .footer .container .list li:last-child {
-  padding-bottom: 0;
+  margin-bottom: 0;
 }
